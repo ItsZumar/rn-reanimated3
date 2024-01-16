@@ -14,7 +14,7 @@ import {
 const SIZE = 90;
 const CIRCLE_RAD = SIZE * 2;
 
-const SquareWithinBoundry = () => {
+export const SquareWithinBoundry = () => {
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
 
@@ -47,8 +47,6 @@ const SquareWithinBoundry = () => {
     </GestureHandlerRootView>
   );
 };
-
-export default SquareWithinBoundry;
 
 export const styles = StyleSheet.create({
   container: {

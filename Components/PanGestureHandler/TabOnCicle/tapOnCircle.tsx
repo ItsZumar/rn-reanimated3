@@ -13,7 +13,7 @@ import {
   GestureHandlerRootView,
 } from 'react-native-gesture-handler';
 
-function TapOnCircle() {
+export const TapOnCircle = () => {
   const pressed = useSharedValue(false);
   const translateCircleX = useSharedValue(0);
   const translateCircleY = useSharedValue(0);
@@ -48,9 +48,7 @@ function TapOnCircle() {
       </GestureDetector>
     </GestureHandlerRootView>
   );
-}
-
-export default TapOnCircle;
+};
 
 const styles = StyleSheet.create({
   container: {

@@ -15,7 +15,7 @@ import {
   GestureHandlerRootView,
 } from 'react-native-gesture-handler';
 
-export default function Interpolate() {
+export const Interpolate = () => {
   const offset = useSharedValue(0);
 
   return (
@@ -27,7 +27,7 @@ export default function Interpolate() {
       </View>
     </GestureHandlerRootView>
   );
-}
+};
 
 interface BoxProps {
   offset: SharedValue<number>;

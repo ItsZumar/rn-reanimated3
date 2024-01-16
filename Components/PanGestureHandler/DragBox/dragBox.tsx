@@ -13,7 +13,7 @@ import {
 
 const SIZE = 120;
 
-export default function DragBox() {
+export const DragBox = () => {
   const translationX = useSharedValue(0);
   const translationY = useSharedValue(0);
 
@@ -57,7 +57,7 @@ export default function DragBox() {
       </View>
     </GestureHandlerRootView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

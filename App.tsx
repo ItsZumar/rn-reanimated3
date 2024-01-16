@@ -1,12 +1,12 @@
-import 'react-native-gesture-handler';
 import React from 'react';
-import {StyleSheet} from 'react-native';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import TapOnCircle from './Components/tapOnCircle';
-import DragBox from './Components/dragBox';
-import Interpolate from './Components/Utilities/Interpolate';
-import SquareWithinBoundry from './Components/PanGestureHandler/SquareWithinBoundry/squareWithinBoundry';
-import MultipleSquares from './Components/PanGestureHandler/MultipleSquares/multipleSquares';
+import {
+  DragBox,
+  Interpolate,
+  MultipleSquares,
+  ScrollableView,
+  SquareWithinBoundry,
+  TapOnCircle,
+} from './Components';
 
 function App() {
   return (
@@ -15,17 +15,10 @@ function App() {
       {/* <DragBox /> */}
       {/* <Interpolate /> */}
       {/* <SquareWithinBoundry /> */}
-      <MultipleSquares />
+      {/* <MultipleSquares /> */}
+      <ScrollableView />
     </>
   );
 }
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    flex: 1,
-    height: '100%',
-  },
-});

@@ -14,7 +14,7 @@ import Animated, {
 const SIZE = 90;
 const BORDER_BOX = SIZE * 3;
 
-const MultipleSquares = () => {
+export const MultipleSquares = () => {
   const translateBox1X = useSharedValue(0);
   const translateBox1Y = useSharedValue(0);
   //  Box2
@@ -32,7 +32,7 @@ const MultipleSquares = () => {
         translateBox1X.value ** 2 + translateBox1Y.value ** 2,
       );
 
-      if (distance < BORDER_BOX + (SIZE * 4) / 2) {
+      if (distance < BORDER_BOX + SIZE * 2) {
         translateBox1X.value = withSpring(0);
         translateBox1Y.value = withSpring(0);
       }
@@ -58,7 +58,7 @@ const MultipleSquares = () => {
         translateBox2X.value ** 2 + translateBox2Y.value ** 2,
       );
 
-      if (distance < BORDER_BOX + (SIZE * 4) / 2) {
+      if (distance < BORDER_BOX + SIZE * 2) {
         translateBox2X.value = withSpring(0);
         translateBox2Y.value = withSpring(0);
       }
@@ -91,8 +91,6 @@ const MultipleSquares = () => {
     </GestureHandlerRootView>
   );
 };
-
-export default MultipleSquares;
 
 const styles = StyleSheet.create({
   container: {
