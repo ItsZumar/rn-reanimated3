@@ -6,6 +6,7 @@ import {
   ScrollableView,
   SquareWithinBoundry,
   TapOnCircle,
+  ToggleTheme,
 } from './Components';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       {/* <Interpolate /> */}
       {/* <SquareWithinBoundry /> */}
       {/* <MultipleSquares /> */}
-      <ScrollableView />
+      {/* <ScrollableView /> */}
+      <ToggleTheme />
     </>
   );
 }
