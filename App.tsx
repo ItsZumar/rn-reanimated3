@@ -4,6 +4,7 @@ import {
   InstaLike,
   Interpolate,
   MultipleSquares,
+  ScrollView,
   ScrollableView,
   SquareWithinBoundry,
   TapOnCircle,
@@ -24,7 +25,8 @@ function App() {
       {/* <ToggleTheme /> */}
       {/* <ZoomExp /> */}
       {/* <ZoomImage /> */}
-      <InstaLike />
+      {/* <InstaLike /> */}
+      <ScrollView />
     </>
   );
 }
