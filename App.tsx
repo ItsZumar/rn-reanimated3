@@ -1,12 +1,15 @@
 import React from 'react';
 import {
   DragBox,
+  InstaLike,
   Interpolate,
   MultipleSquares,
   ScrollableView,
   SquareWithinBoundry,
   TapOnCircle,
   ToggleTheme,
+  ZoomExp,
+  ZoomImage,
 } from './Components';
 
 function App() {
@@ -18,7 +21,10 @@ function App() {
       {/* <SquareWithinBoundry /> */}
       {/* <MultipleSquares /> */}
       {/* <ScrollableView /> */}
-      <ToggleTheme />
+      {/* <ToggleTheme /> */}
+      {/* <ZoomExp /> */}
+      {/* <ZoomImage /> */}
+      <InstaLike />
     </>
   );
 }
