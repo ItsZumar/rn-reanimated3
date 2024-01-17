@@ -6,6 +6,7 @@ export * from './PanGestureHandler/SquareWithinBoundry/squareWithinBoundry';
 export * from './PanGestureHandler/MultipleSquares/multipleSquares';
 export * from './PanGestureHandler/DragBox/dragBox';
 export * from './PanGestureHandler/TabOnCicle/tapOnCircle';
+export * from './PanGestureHandler/ScrollView/scrollView';
 
 export * from './PinchGestureHandler/ZoomExp/zoomExp';
 export * from './PinchGestureHandler/ZoomImage/zoomImage';
