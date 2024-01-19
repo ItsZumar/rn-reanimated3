@@ -1,5 +1,7 @@
 import React from 'react';
 import {
+  CircularProgressBar,
+  ColorpickerScreen,
   DragBox,
   InstaLike,
   Interpolate,
@@ -26,7 +28,10 @@ function App() {
       {/* <ZoomExp /> */}
       {/* <ZoomImage /> */}
       {/* <InstaLike /> */}
-      <ScrollView />
+      {/* <ScrollView /> */}
+      {/* not created yet */}
+      {/* <ColorpickerScreen /> */}
+      <CircularProgressBar />
     </>
   );
 }
