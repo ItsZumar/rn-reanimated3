@@ -9,6 +9,7 @@ import {
   ScrollView,
   ScrollableView,
   SquareWithinBoundry,
+  SwipeToDelete,
   TapOnCircle,
   ToggleTheme,
   ZoomExp,
@@ -31,7 +32,8 @@ function App() {
       {/* <ScrollView /> */}
       {/* not created yet */}
       {/* <ColorpickerScreen /> */}
-      <CircularProgressBar />
+      {/* <CircularProgressBar /> */}
+      <SwipeToDelete />
     </>
   );
 }

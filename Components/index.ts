@@ -16,3 +16,4 @@ export * from './TapGestureHandler/InstaLike/instaLike';
 export * from './ColorPicker/colorpickerScreen';
 
 export * from './CircularProgressBar/circularProgressBar';
+export * from './SwipeToDelete/swipeToDelete';
