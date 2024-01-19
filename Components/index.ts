@@ -12,3 +12,7 @@ export * from './PinchGestureHandler/ZoomExp/zoomExp';
 export * from './PinchGestureHandler/ZoomImage/zoomImage';
 
 export * from './TapGestureHandler/InstaLike/instaLike';
+
+export * from './ColorPicker/colorpickerScreen';
+
+export * from './CircularProgressBar/circularProgressBar';
