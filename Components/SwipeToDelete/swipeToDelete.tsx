@@ -1,4 +1,4 @@
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -29,21 +29,15 @@ export const SwipeToDelete = () => {
   const onDismiss = useCallback((task: TaskInterface) => {
     setTasks(tasks => tasks.filter(item => item.index !== task.index));
   }, []);
-  const scrollRef = useRef(null);
 
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <SafeAreaView style={styles.container}>
         <StatusBar />
         <Text style={styles.title}>Tasks</Text>
-        <ScrollView ref={scrollRef} style={{flex: 1}}>
+        <ScrollView style={{flex: 1}}>
           {tasks.map(task => (
-            <ListItem
-              simultaneousHandlers={scrollRef}
-              key={task.index}
-              task={task}
-              onDismiss={onDismiss}
-            />
+            <ListItem key={task.index} task={task} onDismiss={onDismiss} />
           ))}
         </ScrollView>
       </SafeAreaView>

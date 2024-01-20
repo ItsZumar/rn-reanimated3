@@ -1,10 +1,6 @@
 import React from 'react';
 import {Dimensions, StyleSheet, Text} from 'react-native';
-import {
-  Gesture,
-  GestureDetector,
-  PanGestureHandlerProps,
-} from 'react-native-gesture-handler';
+import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import Animated, {
   runOnJS,
   useAnimatedStyle,
@@ -13,8 +9,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import {TaskInterface} from './swipeToDelete';
 
-interface ListItemProps
-  extends Pick<PanGestureHandlerProps, 'simultaneousHandlers'> {
+interface ListItemProps {
   task: TaskInterface;
   onDismiss?: (task: TaskInterface) => void;
 }

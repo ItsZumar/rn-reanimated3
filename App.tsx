@@ -9,11 +9,12 @@ import {
   ScrollView,
   ScrollableView,
   SquareWithinBoundry,
-  SwipeToDelete,
   TapOnCircle,
   ToggleTheme,
   ZoomExp,
   ZoomImage,
+  SwipeToDelete,
+  RippleAnimation,
 } from './Components';
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
       {/* not created yet */}
       {/* <ColorpickerScreen /> */}
       {/* <CircularProgressBar /> */}
-      <SwipeToDelete />
+      {/* <SwipeToDelete /> */}
+      <RippleAnimation />
     </>
   );
 }
