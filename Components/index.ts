@@ -17,3 +17,5 @@ export * from './ColorPicker/colorpickerScreen';
 
 export * from './CircularProgressBar/circularProgressBar';
 export * from './SwipeToDelete/swipeToDelete';
+
+export * from './RippleAnimation/RippleAnimation';
