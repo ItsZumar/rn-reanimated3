@@ -1,5 +1,7 @@
 export * from './Utilities/Interpolate';
 export * from './Interpolate/ScrollableView/scrollableView';
+export * from './Interpolate/SlidingCounter/slidingCounter';
+
 export * from './InterpolateColor/ToggleTheme/toggleTheme';
 
 export * from './PanGestureHandler/SquareWithinBoundry/squareWithinBoundry';
