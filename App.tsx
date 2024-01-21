@@ -18,6 +18,7 @@ import {
   MenuPerspective,
   SlidingCounter,
   LayoutAnimations,
+  AnimatedFlatlist,
 } from './Components';
 
 function App() {
@@ -41,7 +42,8 @@ function App() {
       {/* <RippleAnimation /> */}
       {/* <MenuPerspective /> */}
       {/* <SlidingCounter /> */}
-      <LayoutAnimations />
+      {/* <LayoutAnimations /> */}
+      <AnimatedFlatlist />
     </>
   );
 }
