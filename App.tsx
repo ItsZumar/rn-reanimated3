@@ -17,6 +17,7 @@ import {
   RippleAnimation,
   MenuPerspective,
   SlidingCounter,
+  LayoutAnimations,
 } from './Components';
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
       {/* <SwipeToDelete /> */}
       {/* <RippleAnimation /> */}
       {/* <MenuPerspective /> */}
-      <SlidingCounter />
+      {/* <SlidingCounter /> */}
+      <LayoutAnimations />
     </>
   );
 }

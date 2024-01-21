@@ -22,3 +22,6 @@ export * from './CircularProgressBar/circularProgressBar';
 export * from './SwipeToDelete/swipeToDelete';
 
 export * from './MenuPerspective/menuPerspective';
+
+export * from './ClockLoader/clockLoader';
+export * from './LayoutAnimations/layoutAnimations';
