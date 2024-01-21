@@ -15,6 +15,7 @@ import {
   ZoomImage,
   SwipeToDelete,
   RippleAnimation,
+  MenuPerspective,
 } from './Components';
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
       {/* <ColorpickerScreen /> */}
       {/* <CircularProgressBar /> */}
       {/* <SwipeToDelete /> */}
-      <RippleAnimation />
+      {/* <RippleAnimation /> */}
+      <MenuPerspective />
     </>
   );
 }
