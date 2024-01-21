@@ -16,6 +16,7 @@ import {
   SwipeToDelete,
   RippleAnimation,
   MenuPerspective,
+  SlidingCounter,
 } from './Components';
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
       {/* <CircularProgressBar /> */}
       {/* <SwipeToDelete /> */}
       {/* <RippleAnimation /> */}
-      <MenuPerspective />
+      {/* <MenuPerspective /> */}
+      <SlidingCounter />
     </>
   );
 }
