@@ -25,3 +25,4 @@ export * from './MenuPerspective/menuPerspective';
 
 export * from './ClockLoader/clockLoader';
 export * from './LayoutAnimations/layoutAnimations';
+export * from './AnimatedFlatlist/animatedFlatlist';
