@@ -12,10 +12,11 @@ export * from './PinchGestureHandler/ZoomExp/zoomExp';
 export * from './PinchGestureHandler/ZoomImage/zoomImage';
 
 export * from './TapGestureHandler/InstaLike/instaLike';
+export * from './RippleAnimation/RippleAnimation';
 
 export * from './ColorPicker/colorpickerScreen';
 
 export * from './CircularProgressBar/circularProgressBar';
 export * from './SwipeToDelete/swipeToDelete';
 
-export * from './RippleAnimation/RippleAnimation';
+export * from './MenuPerspective/menuPerspective';
