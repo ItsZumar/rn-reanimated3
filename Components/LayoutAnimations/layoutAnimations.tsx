@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native';
 import Animated, {FadeIn, FadeOut, Layout} from 'react-native-reanimated';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const LIST_ITEM_COLOR = '#1798DE';
 
@@ -21,7 +22,6 @@ export const LayoutAnimations = () => {
     initialMode.current = false;
   }, []);
 
-  // new Array(5).fill(0).map((_, index) => ({ id: index }))
   const [items, setItems] = useState<Item[]>(
     new Array(5).fill(0).map((_, index) => ({id: index})),
   );
@@ -42,11 +42,11 @@ export const LayoutAnimations = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.floatingButton} onPress={onAdd}>
-        <Text style={{color: 'white', fontSize: 40}}>+</Text>
+        <AntDesign name="plus" size={30} color={'#fff'} />
       </TouchableOpacity>
       <ScrollView
         style={{flex: 1}}
-        contentContainerStyle={{paddingVertical: 50}}>
+        contentContainerStyle={{paddingVertical: 10}}>
         {items.map((item, index) => {
           return (
             <Animated.View
@@ -78,8 +78,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     borderRadius: 20,
     alignSelf: 'center',
-    // Shadow on Android
     elevation: 5,
+    zIndex: 1,
   },
   floatingButton: {
     width: 80,
