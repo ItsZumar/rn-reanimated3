@@ -21,6 +21,8 @@ import {
   AnimatedFlatlist,
   DropdownMenu,
   CircularCarousel,
+  SkeletonAnimation,
+  CustomSegmentedControl,
 } from './Components';
 
 function App() {
@@ -47,7 +49,9 @@ function App() {
       {/* <LayoutAnimations /> */}
       {/* <AnimatedFlatlist /> */}
       {/* <DropdownMenu /> */}
-      <CircularCarousel />
+      {/* <CircularCarousel /> */}
+      {/* <SkeletonAnimation /> */}
+      <CustomSegmentedControl />
     </>
   );
 }

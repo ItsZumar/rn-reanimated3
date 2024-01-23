@@ -28,3 +28,5 @@ export * from './LayoutAnimations/layoutAnimations';
 export * from './AnimatedFlatlist/animatedFlatlist';
 export * from './DropdownMenu/dropdownMenu';
 export * from './CircularCarousel/circularCarousel';
+export * from './SkeletonAnimation/skeletonAnimation';
+export * from './CustomSegmentedControl/CustomSegmentedControl';
