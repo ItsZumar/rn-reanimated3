@@ -27,3 +27,4 @@ export * from './ClockLoader/clockLoader';
 export * from './LayoutAnimations/layoutAnimations';
 export * from './AnimatedFlatlist/animatedFlatlist';
 export * from './DropdownMenu/dropdownMenu';
+export * from './CircularCarousel/circularCarousel';

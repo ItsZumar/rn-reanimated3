@@ -20,6 +20,7 @@ import {
   LayoutAnimations,
   AnimatedFlatlist,
   DropdownMenu,
+  CircularCarousel,
 } from './Components';
 
 function App() {
@@ -45,7 +46,8 @@ function App() {
       {/* <SlidingCounter /> */}
       {/* <LayoutAnimations /> */}
       {/* <AnimatedFlatlist /> */}
-      <DropdownMenu />
+      {/* <DropdownMenu /> */}
+      <CircularCarousel />
     </>
   );
 }
