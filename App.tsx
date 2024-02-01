@@ -23,6 +23,8 @@ import {
   CircularCarousel,
   SkeletonAnimation,
   CustomSegmentedControl,
+  BasicAnimations,
+  DragTrain,
 } from './Components';
 
 function App() {
@@ -51,7 +53,9 @@ function App() {
       {/* <DropdownMenu /> */}
       {/* <CircularCarousel /> */}
       {/* <SkeletonAnimation /> */}
-      <CustomSegmentedControl />
+      {/* <CustomSegmentedControl /> */}
+      {/* <BasicAnimations /> */}
+      <DragTrain />
     </>
   );
 }
