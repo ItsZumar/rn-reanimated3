@@ -26,36 +26,58 @@ import {
   BasicAnimations,
   DragTrain,
 } from './Components';
+import {Home, CityDetail} from './screens';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+
+export type RootStackParamList = {
+  Home: undefined;
+  CityDetail: {id: string};
+};
+
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 function App() {
   return (
     <>
-      {/* <TapOnCircle /> */}
-      {/* <DragBox /> */}
-      {/* <Interpolate /> */}
-      {/* <SquareWithinBoundry /> */}
-      {/* <MultipleSquares /> */}
-      {/* <ScrollableView /> */}
-      {/* <ToggleTheme /> */}
-      {/* <ZoomExp /> */}
-      {/* <ZoomImage /> */}
-      {/* <InstaLike /> */}
-      {/* <ScrollView /> */}
-      {/* not created yet */}
-      {/* <ColorpickerScreen /> */}
-      {/* <CircularProgressBar /> */}
-      {/* <SwipeToDelete /> */}
-      {/* <RippleAnimation /> */}
-      {/* <MenuPerspective /> */}
-      {/* <SlidingCounter /> */}
-      {/* <LayoutAnimations /> */}
-      {/* <AnimatedFlatlist /> */}
-      {/* <DropdownMenu /> */}
-      {/* <CircularCarousel /> */}
-      {/* <SkeletonAnimation /> */}
-      {/* <CustomSegmentedControl /> */}
-      {/* <BasicAnimations /> */}
-      <DragTrain />
+      <>
+        {/* COMPONENTS */}
+
+        {/* <TapOnCircle /> */}
+        {/* <DragBox /> */}
+        {/* <Interpolate /> */}
+        {/* <SquareWithinBoundry /> */}
+        {/* <MultipleSquares /> */}
+        {/* <ScrollableView /> */}
+        {/* <ToggleTheme /> */}
+        {/* <ZoomExp /> */}
+        {/* <ZoomImage /> */}
+        {/* <InstaLike /> */}
+        {/* <ScrollView /> */}
+        {/* not created yet */}
+        {/* <ColorpickerScreen /> */}
+        {/* <CircularProgressBar /> */}
+        {/* <SwipeToDelete /> */}
+        {/* <RippleAnimation /> */}
+        {/* <MenuPerspective /> */}
+        {/* <SlidingCounter /> */}
+        {/* <LayoutAnimations /> */}
+        {/* <AnimatedFlatlist /> */}
+        {/* <DropdownMenu /> */}
+        {/* <CircularCarousel /> */}
+        {/* <SkeletonAnimation /> */}
+        {/* <CustomSegmentedControl /> */}
+        {/* <BasicAnimations /> */}
+        {/* <DragTrain /> */}
+      </>
+
+      {/* SCREENS */}
+      <NavigationContainer>
+        <RootStack.Navigator initialRouteName="Home">
+          <RootStack.Screen name="Home" component={Home} />
+          <RootStack.Screen name="CityDetail" component={CityDetail} />
+        </RootStack.Navigator>
+      </NavigationContainer>
     </>
   );
 }
