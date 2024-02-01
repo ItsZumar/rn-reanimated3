@@ -1,29 +1,40 @@
-// Import required dependencies
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {RootStackParamList} from '../../App';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {CITIES, CITIES_I} from '../../constants';
+import {CITIES} from '../../constants';
+import Animated from 'react-native-reanimated';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'CityDetail'>;
 
-export const CityDetail: React.FC<Props> = ({route}) => {
+export const CityDetail: React.FC<Props> = ({navigation, route}) => {
   const {id} = route.params;
-
-  const loremText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`;
-
   const city = CITIES.find(c => c.id === id);
 
   return (
     <View style={styles.container}>
       {city && (
         <>
-          <Image source={{uri: city.image}} style={styles.cityImage} />
-          <Text style={styles.cityName}>{city.name}</Text>
-          <Text style={styles.cityDescription}>{loremText}</Text>
+          <Animated.Image
+            sharedTransitionTag={`image-${city.id}`}
+            source={{uri: city.image}}
+            style={styles.cityImage}
+          />
+          <Animated.Text
+            // sharedTransitionTag={`title-${id}`}
+            style={styles.cityName}>
+            {city.name}
+          </Animated.Text>
+          <Text style={styles.heading}>Detail:</Text>
+
+          <Text style={styles.cityDescription}>{city.description}</Text>
         </>
       )}
+
+      <TouchableOpacity onPress={() => navigation.goBack()} style={styles.icon}>
+        <Ionicons name="arrow-back" size={25} color={'#ffffff'} />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -31,7 +42,6 @@ export const CityDetail: React.FC<Props> = ({route}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     backgroundColor: '#ffffff',
   },
   cityImage: {
@@ -40,13 +50,29 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   cityName: {
-    fontSize: 24,
-    fontWeight: 'bold',
+    fontSize: 20,
     marginBottom: 8,
+    paddingHorizontal: 20,
+    color: '#000000',
+    fontWeight: 'bold',
+  },
+  heading: {
+    fontSize: 16,
+    paddingHorizontal: 20,
+    color: '#000000',
+    fontWeight: 'bold',
   },
   cityDescription: {
     fontSize: 16,
     paddingHorizontal: 20,
     paddingVertical: 10,
+  },
+  icon: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    backgroundColor: '#373737',
+    padding: 8,
+    borderRadius: 50,
   },
 });

@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  FlatList,
-  TouchableOpacity,
-} from 'react-native';
+import {Text, StyleSheet, FlatList, TouchableOpacity, View} from 'react-native';
 import {CITIES, CITIES_I} from '../../constants';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../App';
+import Animated from 'react-native-reanimated';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -19,13 +13,33 @@ export const Home: React.FC<Props> = ({navigation, route}) => {
       style={styles.gridItem}
       key={id}
       onPress={() => navigation.navigate('CityDetail', {id})}>
-      <Image source={{uri: image}} style={styles.cityImage} />
-      <Text style={styles.cityName}>{name}</Text>
+      <Animated.Image
+        sharedTransitionTag={`image-${id}`}
+        source={{uri: image}}
+        style={styles.cityImage}
+      />
+      <Animated.Text
+        // sharedTransitionTag={`title-${id}`}
+        style={styles.cityName}>
+        {name}
+      </Animated.Text>
     </TouchableOpacity>
   );
 
   return (
     <>
+      <Text
+        style={{
+          backgroundColor: '#0099FF',
+          padding: 15,
+          textAlign: 'center',
+          color: '#ffffff',
+          fontSize: 24,
+          fontWeight: 'bold',
+          letterSpacing: 2,
+        }}>
+        Cities Tour
+      </Text>
       <FlatList
         data={CITIES}
         numColumns={2}
@@ -40,10 +54,11 @@ export const Home: React.FC<Props> = ({navigation, route}) => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
+    backgroundColor: '#ffffff',
   },
   gridItem: {
     flex: 1,
-    margin: 8,
+    margin: 15,
     alignItems: 'center',
   },
   cityImage: {
@@ -53,7 +68,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   cityName: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
+    color: '#000000',
   },
 });
