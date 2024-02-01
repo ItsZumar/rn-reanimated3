@@ -73,7 +73,9 @@ function App() {
 
       {/* SCREENS */}
       <NavigationContainer>
-        <RootStack.Navigator initialRouteName="Home">
+        <RootStack.Navigator
+          initialRouteName="Home"
+          screenOptions={{headerShown: false}}>
           <RootStack.Screen name="Home" component={Home} />
           <RootStack.Screen name="CityDetail" component={CityDetail} />
         </RootStack.Navigator>
