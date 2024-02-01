@@ -1,3 +1,6 @@
+export * from './Animations/BasicAnimations/BasicAnimations';
+export * from './Animations/Train/Train';
+
 export * from './Utilities/Interpolate';
 export * from './Interpolate/ScrollableView/scrollableView';
 export * from './Interpolate/SlidingCounter/slidingCounter';

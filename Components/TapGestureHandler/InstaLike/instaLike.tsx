@@ -88,12 +88,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '40%',
     left: '40%',
-    shadowOffset: {
-      width: 0,
-      height: 20,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 10,
     elevation: 8,
   },
   text: {
