@@ -1,8 +1,8 @@
 import React from 'react';
-import {Text, StyleSheet, FlatList, TouchableOpacity, View} from 'react-native';
+import {Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
+import {RootStackParamList} from '../../App';
 import {CITIES, CITIES_I} from '../../constants';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../App';
 import Animated from 'react-native-reanimated';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
@@ -18,11 +18,7 @@ export const Home: React.FC<Props> = ({navigation, route}) => {
         source={{uri: image}}
         style={styles.cityImage}
       />
-      <Animated.Text
-        // sharedTransitionTag={`title-${id}`}
-        style={styles.cityName}>
-        {name}
-      </Animated.Text>
+      <Animated.Text style={styles.cityName}>{name}</Animated.Text>
     </TouchableOpacity>
   );
 
