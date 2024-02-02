@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import {RootStackParamList} from '../../App';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {CITIES} from '../../constants';
-import Animated from 'react-native-reanimated';
+import Animated, {FadeInLeft} from 'react-native-reanimated';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'CityDetail'>;
@@ -22,13 +22,21 @@ export const CityDetail: React.FC<Props> = ({navigation, route}) => {
             style={styles.cityImage}
           />
           <Animated.Text
-            // sharedTransitionTag={`title-${id}`}
+            entering={FadeInLeft.duration(500).delay(400)}
             style={styles.cityName}>
             {city.name}
           </Animated.Text>
-          <Text style={styles.heading}>Detail:</Text>
+          <Animated.Text
+            entering={FadeInLeft.duration(500).delay(600)}
+            style={styles.heading}>
+            Detail:
+          </Animated.Text>
 
-          <Text style={styles.cityDescription}>{city.description}</Text>
+          <Animated.Text
+            entering={FadeInLeft.duration(500).delay(800)}
+            style={styles.cityDescription}>
+            {city.description}
+          </Animated.Text>
         </>
       )}
 
