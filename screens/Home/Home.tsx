@@ -1,9 +1,10 @@
 import React from 'react';
-import {Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
+import {Text, StyleSheet, FlatList, TouchableOpacity, View} from 'react-native';
 import {RootStackParamList} from '../../App';
 import {CITIES, CITIES_I} from '../../constants';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import Animated from 'react-native-reanimated';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -24,18 +25,24 @@ export const Home: React.FC<Props> = ({navigation, route}) => {
 
   return (
     <>
-      <Text
-        style={{
-          backgroundColor: '#0099FF',
-          padding: 15,
-          textAlign: 'center',
-          color: '#ffffff',
-          fontSize: 24,
-          fontWeight: 'bold',
-          letterSpacing: 2,
-        }}>
-        Cities Tour
-      </Text>
+      <View
+        style={{flexDirection: 'row', backgroundColor: '#0099FF', padding: 15}}>
+        <Text
+          style={{
+            textAlign: 'center',
+            color: '#ffffff',
+            fontSize: 24,
+            fontWeight: 'bold',
+            letterSpacing: 2,
+            flexGrow: 1,
+          }}>
+          Cities Tour
+        </Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('FavouriteCities')}>
+          <Ionicons name="heart" size={30} color={'red'} />
+        </TouchableOpacity>
+      </View>
       <FlatList
         data={CITIES}
         numColumns={2}
