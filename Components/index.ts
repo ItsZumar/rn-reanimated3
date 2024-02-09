@@ -33,3 +33,5 @@ export * from './DropdownMenu/dropdownMenu';
 export * from './CircularCarousel/circularCarousel';
 export * from './SkeletonAnimation/skeletonAnimation';
 export * from './CustomSegmentedControl/CustomSegmentedControl';
+
+export * from './BottomSheet/BottomSheet';
