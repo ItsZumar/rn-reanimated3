@@ -35,3 +35,5 @@ export * from './SkeletonAnimation/skeletonAnimation';
 export * from './CustomSegmentedControl/CustomSegmentedControl';
 
 export * from './BottomSheet/BottomSheet';
+export * from './BottomSheet/CustomizeBottomSheet';
+export * from './Modal/ImageModal';
