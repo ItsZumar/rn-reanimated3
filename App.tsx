@@ -25,6 +25,8 @@ import {
   CustomSegmentedControl,
   BasicAnimations,
   DragTrain,
+  CustomizeBottomSheet,
+  BottomSheet,
 } from './Components';
 import {Home, CityDetail, FavouriteCities} from './screens';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -70,6 +72,8 @@ function App() {
         {/* <CustomSegmentedControl /> */}
         {/* <BasicAnimations /> */}
         {/* <DragTrain /> */}
+        {/* <CustomizeBottomSheet height={400} /> */}
+        {/* <BottomSheet /> */}
       </>
 
       {/* SCREENS */}

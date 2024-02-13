@@ -1,12 +1,21 @@
 import React from 'react';
-import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Dimensions,
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../App';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {CITIES, CITIES_I} from '../../constants';
 import Animated from 'react-native-reanimated';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {BottomSheet} from '../../Components';
+import {BottomSheet, CustomizeBottomSheet} from '../../Components';
+
+const {height} = Dimensions.get('window');
 
 type Props = NativeStackScreenProps<RootStackParamList, 'FavouriteCities'>;
 
@@ -47,6 +56,15 @@ export const FavouriteCities: React.FC<Props> = ({navigation, route}) => {
         />
       </>
 
+      {/* <CustomizeBottomSheet
+        height={height - 810}
+        children={
+          <View>
+            <Text>List</Text>
+          </View>
+        }
+        closeBottomSheet={() => {}}
+      /> */}
       <BottomSheet />
     </GestureHandlerRootView>
   );

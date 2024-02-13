@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import {RootStackParamList} from '../../App';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {CITIES} from '../../constants';
+import {ImageModal} from '../../Components';
 import Animated, {FadeInLeft} from 'react-native-reanimated';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'CityDetail'>;
 
 export const CityDetail: React.FC<Props> = ({navigation, route}) => {
   const {id} = route.params;
+  const [imageModal, setImageModal] = useState<boolean>(false);
+
   const city = CITIES.find(c => c.id === id);
 
   return (
@@ -43,6 +47,18 @@ export const CityDetail: React.FC<Props> = ({navigation, route}) => {
       <TouchableOpacity onPress={() => navigation.goBack()} style={styles.icon}>
         <Ionicons name="arrow-back" size={25} color={'#ffffff'} />
       </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => setImageModal(prev => !prev)}
+        style={styles.rightIcon}>
+        <Entypo name="resize-full-screen" size={25} color={'#ffffff'} />
+      </TouchableOpacity>
+
+      <ImageModal
+        image={city?.image}
+        isVisible={imageModal}
+        onClosePress={() => setImageModal(prev => !prev)}
+      />
     </View>
   );
 };
@@ -79,6 +95,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 20,
     left: 20,
+    backgroundColor: '#373737',
+    padding: 8,
+    borderRadius: 50,
+  },
+  rightIcon: {
+    position: 'absolute',
+    top: 20,
+    right: 20,
     backgroundColor: '#373737',
     padding: 8,
     borderRadius: 50,
