@@ -13,7 +13,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {CITIES, CITIES_I} from '../../constants';
 import Animated from 'react-native-reanimated';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {BottomSheet, CustomizeBottomSheet} from '../../Components';
+import {BottomSheet} from '../../Components';
 
 const {height} = Dimensions.get('window');
 
