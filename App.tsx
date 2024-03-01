@@ -31,11 +31,13 @@ import {
 import {Home, CityDetail, FavouriteCities} from './screens';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
+import ParallexImage from './Transitions/ParallexImage';
 
 export type RootStackParamList = {
   Home: undefined;
   CityDetail: {id: string};
   FavouriteCities: undefined;
+  ParallexImage: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -80,12 +82,17 @@ function App() {
       <NavigationContainer>
         <RootStack.Navigator
           initialRouteName="Home"
-          screenOptions={{headerShown: false}}>
-          <RootStack.Screen name="Home" component={Home} />
+          screenOptions={{headerShown: true}}>
+          {/* <RootStack.Screen name="Home" component={Home} />
           <RootStack.Screen name="CityDetail" component={CityDetail} />
           <RootStack.Screen
             name="FavouriteCities"
             component={FavouriteCities}
+          /> */}
+          <RootStack.Screen
+            name="ParallexImage"
+            component={ParallexImage}
+            options={{title: ''}}
           />
         </RootStack.Navigator>
       </NavigationContainer>
